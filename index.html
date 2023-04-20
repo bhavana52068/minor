@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>BODY PERFORMANCE</title>
+</head>
+<body>
+<center>
+    <table>
+        <tr>
+            <td bgcolor="white">
+    <h2 style="color: black"><b><i><u>BODY PERFORMANCE BY WORKOUT</u></i></b></h2>
+            </td>
+        </tr>
+   </table>
+   <form action='./predict' method="post">
+    <table class="center">
+
+        <tr>
+
+            <td colspan="2" style="color: white" bgcolor="black"><marquee speed="80"><i>WORKOUT PERFORMANCE</i></marquee></td>
+
+
+        </tr>
+        <tr>
+            <td style="color: black"; bgcolor="#F0F0F0">
+      <label><b> AGE </b></label>
+       </td>
+       <td>
+      <input type="number" name="age" placeholder="Enter your age" rows="1" cols="20">
+       </td>
+        </tr>
+        <tr> <td>Gender </td>
+            <td><input type="radio" name="gender" value="M">Male
+         <input type="radio"  name="gender" value="F">Female</td>
+        </tr>
+
+
+        <tr>
+            <td style="color: black"; bgcolor="#F0F0F0">
+      <label><b>HEIGHT(cm)</b></label>
+            </td>
+            <td>
+        <input type="number" name="height" placeholder="Enter your height(cm)" min="140" max="200" step="0.1" rows="1" cols="50">
+            </td>
+
+        <tr>
+            <td style="color: black"; bgcolor="#F0F0F0">
+      <label><b>WEIGHT(kg)</b></label>
+            </td>
+            <td>
+       <input type="number" name="weight" placeholder="Enter your weight(kg)" min="30" max="150" step="0.1" rows="1" cols="50">
+            </td>
+        </tr>
+        <tr>
+            <td style="color: black"; bgcolor="#F0F0F0">
+      <label><b>body fat_%</b></label>
+       </td>
+       <td>
+      <input type="number" name="body_fat" placeholder="Enter your body fat_%" rows="1" cols="20">
+       </td>
+        </tr>
+        <tr>
+            <td style="color: black"; bgcolor="#F0F0F0">
+      <label><b>diastolic</b></label>
+       </td>
+       <td>
+      <input type="number" name="diastolic" placeholder="Enter your diastolic" rows="1" cols="20">
+       </td>
+        </tr>
+        <tr>
+            <td style="color: black"; bgcolor="#F0F0F0">
+      <label><b>systolic</b></label>
+       </td>
+       <td>
+      <input type="number" name="systolic" placeholder="Enter your systolic" rows="1" cols="20">
+       </td>
+        </tr>
+        <tr>
+            <td style="color: black"; bgcolor="#F0F0F0">
+      <label><b>gripForce</b></label>
+       </td>
+       <td>
+      <input type="number" name="gripforce" placeholder="Enter your gripForce" rows="1" cols="20">
+       </td>
+        </tr>
+
+        <tr>
+            <td style="color: black"; bgcolor="#F0F0F0">
+      <label><b>SIT & BEND FORWARD LENGTH</b></label>
+            </td>
+            <td>
+       <input type="number" name="sit&bend_forward_length" placeholder="Enter forward length(cm)" min="-50" max="50" step="0.1" rows="1" cols="50">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="color: black"; bgcolor="#F0F0F0">
+      <label><b>SIT-UPS COUNT</b></label>
+            </td>
+            <td>
+       <input type="number" name="sit_ups_count" placeholder="Enter sit-ups count" min="0" max="150" step="1" >
+            </td>
+        </tr>
+
+        <tr>
+            <td style="color: black"; bgcolor="#F0F0F0">
+      <label><b>BOARD JUMP</b></label>
+            </td>
+            <td>
+       <input type="number" name="board_jump" placeholder="Enter broad jump(cm)" min="30" max="400" step="0.1" rows="1" cols="50">
+            </td>
+        </tr>
+</table>
+      <br>
+       <input type="submit" value="Submit" style="color: black;">
+         <br>
+       <input type="reset" value="Reset" style="color: black;">
+          <br>
+
+
+       <p style="color: black" ><b><h2>Grade : {{pred}}</h2></b></p>
+
+   </form>
+
+    </center>
+</body>
+</html>
